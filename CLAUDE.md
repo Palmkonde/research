@@ -2,6 +2,17 @@
 
 Research vault for a human reader (in Obsidian) and for agents. The terms Field, Topic, Question, Finding, Source, Prerequisite and Deep dive mean exactly what GLOSSARY.md says. The Fields are listed in README.md.
 
+## Workflow
+
+Route each request by its shape:
+
+- **Vague curiosity** ("I'm curious about X"): use the `grilling` skill to sharpen it into concrete Questions, then write them as open Questions in the Topic README.
+- **One Question**, or a deep dive into an existing Finding: use the `research` skill. It does a Research run (below).
+- **Broad survey** of a new Topic: use `anthropic-skills:deep-research`, and turn its report into the Topic README's overview and open Questions. Findings still come only from Research runs.
+- **New vault term**: use the `domain-modeling` skill to update GLOSSARY.md.
+
+When handing a Research run to a background agent, the brief names the target `<field>/<topic>/` and tells the agent to follow the "Research run" section of this file, including its done checklist. When the agent reports back, check that checklist yourself before telling the user the run is finished.
+
 ## Research run
 
 Each run answers one Question with one Finding.
