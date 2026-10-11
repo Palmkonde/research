@@ -6,8 +6,7 @@ Known-optimal benchmarks (QUEKO, QUBIKOS) show heuristics still insert far more 
 This Topic is scoped as a candidate reproduce-then-extend final project on a laptop.
 
 ## Prerequisites
-
-No Prerequisite Topic exists in the vault yet. Gate-level circuits and two-qubit gate decomposition would be candidates.
+- [Quantum computing basics](../quantum-computing-basics/README.md)
 
 ## Questions
 
