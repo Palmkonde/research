@@ -1,6 +1,6 @@
 # Research
 
-Personal research vault. Layout: `<field>/<topic>/`. Terms in [GLOSSARY.md](GLOSSARY.md); conventions in [CLAUDE.md](CLAUDE.md).
+Personal research vault. Layout: `<field>/<topic>/`. Terms in [GLOSSARY.md](GLOSSARY.md); conventions in [CLAUDE.md](CLAUDE.md). Learning plan in [PLAN.md](PLAN.md).
 
 ## Fields
 
