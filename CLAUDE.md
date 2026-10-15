@@ -10,6 +10,8 @@ Route each request by its shape:
 - **One Question**, or a deep dive into an existing Finding: use the `research` skill. It does a Research run (below).
 - **Broad survey** of a new Topic: use `anthropic-skills:deep-research`, and turn its report into the Topic README's overview and open Questions. Findings still come only from Research runs.
 - **New vault term**: use the `domain-modeling` skill to update GLOSSARY.md.
+- **Paper literature scan** of a Topic: use `academic-research-skills:deep-research` in `lit-review` or `three-way-scan` mode. Its report feeds the Topic README's overview and open Questions, never Findings.
+- **Check that cited papers are real** (a Finding's Sources, or a list of papers): use `academic-research-skills:academic-paper` in `citation-check` mode. Fix or remove any Source note it fails.
 
 When handing a Research run to a background agent, the brief names the target `<field>/<topic>/` and tells the agent to follow the "Research run" section of this file, including its done checklist. When the agent reports back, check that checklist yourself before telling the user the run is finished.
 
