@@ -3,10 +3,13 @@ Fundamentals of quantum computing: qubit states, gates, circuits and a first alg
 
 ## Questions
 - [x] [How do the common one- and two-qubit gates (X, H, S, T, Rz, CNOT, CZ, SWAP) act on qubit states?](common-gates-action.md)
-- [ ] How is a quantum circuit drawn, written in OpenQASM, and loaded and run in Qiskit?
+- [x] [How is a quantum circuit drawn, written in OpenQASM, and loaded and run in Qiskit?](quantum-circuit-openqasm-qiskit.md)
 - [ ] How does a circuit become a DAG, and what are its layers and front layer?
 - [ ] What is a coupling map, and what do real device topologies (heavy-hex, grid) look like?
 - [ ] What is a native gate set, and how do SWAP and other two-qubit gates decompose into native gates?
 - [ ] Why does each extra two-qubit gate lower a circuit's success probability on noisy hardware?
 - [ ] Why does the global phase between P and Rz stop being ignorable once the gate is controlled (CP vs CRZ)?
 - [ ] How do Hadamards reverse a CNOT's control and target, and when does a router need that on a directed coupling map?
+- [ ] What does transpiling to an ISA circuit with `generate_preset_pass_manager` change in a circuit, stage by stage?
+- [ ] How do mid-circuit measurement and classical feed-forward (`if (c[0]) ...`) work in OpenQASM 3, Qiskit and PennyLane?
+- [ ] Why does PennyLane's `from_qasm3` reject `include "stdgates.inc"` and register wire maps, and is that fixed in a newer release?
