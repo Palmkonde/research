@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 140" width="560" height="140" font-family="serif" font-size="18">
+  <!-- A CNOT used as a would-be cloner: |psi> controls, a blank |0> is the target. -->
+  <rect width="560" height="140" fill="#ffffff"/>
+  <g stroke="#000000" stroke-width="2" fill="none">
+    <line x1="180" y1="45" x2="300" y2="45"/>
+    <line x1="180" y1="105" x2="300" y2="105"/>
+    <line x1="240" y1="45" x2="240" y2="119"/>
+    <circle cx="240" cy="105" r="14"/>
+    <path d="M226 105 H254"/>
+    <!-- bracket over both outputs: the output is one joint state -->
+    <path d="M310 35 H318 V115 H310"/>
+  </g>
+  <circle cx="240" cy="45" r="6" fill="#000000"/>
+  <g fill="#000000">
+    <text x="170" y="51" text-anchor="end">|ψ⟩ = α|0⟩ + β|1⟩</text>
+    <text x="170" y="111" text-anchor="end">blank |0⟩</text>
+    <text x="330" y="70">α|00⟩ + β|11⟩</text>
+  </g>
+  <text x="330" y="98" fill="#b00000">≠ |ψ⟩ ⊗ |ψ⟩</text>
+</svg>

@@ -7,3 +7,7 @@ Personal research vault. Layout: `<field>/<topic>/`. Terms in [GLOSSARY.md](GLOS
 - **low-level**: hardware, OS, compilers, memory.
 - **quantum-computing**: quantum computing.
 - **fundamentals**: math and physics that other Fields build on.
+
+## Rendering animations
+
+Animations are stored as scene code only. To render them after cloning, see [VISUALS.md](VISUALS.md#rendering-every-animation).

@@ -1,2 +1,7 @@
 .obsidian/workspace*.json
 .claude/settings.local.json
+# Rendered animations: rebuild from the .py beside them (see VISUALS.md)
+**/assets/**/*.mp4
+*.storyboard*.png
+*.srt
+__pycache__/

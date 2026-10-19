@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 140" width="460" height="140" font-family="serif" font-size="20">
+  <!-- swap a, b { cx a, b; cx b, a; cx a, b; } drawn as a circuit, then the SWAP symbol -->
+  <rect width="460" height="140" fill="#ffffff"/>
+  <g stroke="#000000" stroke-width="2" fill="none">
+    <!-- wires -->
+    <line x1="40" y1="40" x2="290" y2="40"/>
+    <line x1="40" y1="100" x2="290" y2="100"/>
+    <line x1="340" y1="40" x2="440" y2="40"/>
+    <line x1="340" y1="100" x2="440" y2="100"/>
+    <!-- cx a, b -->
+    <line x1="90" y1="40" x2="90" y2="114"/>
+    <circle cx="90" cy="100" r="14"/>
+    <!-- cx b, a -->
+    <line x1="165" y1="26" x2="165" y2="100"/>
+    <circle cx="165" cy="40" r="14"/>
+    <!-- cx a, b -->
+    <line x1="240" y1="40" x2="240" y2="114"/>
+    <circle cx="240" cy="100" r="14"/>
+    <!-- SWAP -->
+    <line x1="390" y1="40" x2="390" y2="100"/>
+    <path d="M380 30 L400 50 M400 30 L380 50 M380 90 L400 110 M400 90 L380 110"/>
+    <!-- target crosses -->
+    <path d="M76 100 H104 M151 40 H179 M226 100 H254"/>
+  </g>
+  <g fill="#000000">
+    <circle cx="90" cy="40" r="6"/>
+    <circle cx="165" cy="100" r="6"/>
+    <circle cx="240" cy="40" r="6"/>
+    <text x="14" y="47">a</text>
+    <text x="14" y="107">b</text>
+    <text x="306" y="77">=</text>
+  </g>
+</svg>

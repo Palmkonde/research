@@ -20,14 +20,16 @@ When handing a Research run to a background agent, the brief names the target `<
 Each run answers one Question with one Finding.
 
 1. **Place the Question** at `<field>/<topic>/`. Pick the Topic's *home* Field: the one where a reader would look for it first. A new Field gets created only when no existing Field fits; add its one-line definition to README.md when you create it.
-2. **Write or expand the Finding** at `<field>/<topic>/<question-slug>.md`. If a Finding already exists for this Question, expand that file. A request to elaborate adds or extends its `## Deep dive` section.
-3. **Record each Source** cited in the Finding as a Source note. If a note for that Source already exists anywhere in the vault, link to the existing note instead of creating a new one.
-4. **Update the Topic README**: tick the Question and link it to its Finding, and add each Follow-up as an open Question.
-5. **Stub each missing Prerequisite**: create its Topic README in the Prerequisite's own home Field. Give it a ~5-line overview covering only what the dependent Topic needs, plus open Questions, and no Findings. Then link it under the dependent Topic's `## Prerequisites`.
+2. **Write or expand the Finding** at `<field>/<topic>/<question-slug>.md`, in the textbook style of the Finding template. If a Finding already exists for this Question, expand that file. A request to elaborate adds or extends its `## Deep dive` section.
+3. **Add visuals**: for each mechanism the Explanation walks through (a proof step, a transformation, a circuit), pick a rung from the ladder in [VISUALS.md](VISUALS.md), cheapest first, or decide prose is enough.
+4. **Record each Source** cited in the Finding as a Source note. If a note for that Source already exists anywhere in the vault, link to the existing note instead of creating a new one.
+5. **Update the Topic README**: tick the Question and link it to its Finding, and add each Follow-up as an open Question.
+6. **Stub each missing Prerequisite**: create its Topic README in the Prerequisite's own home Field. Give it a ~5-line overview covering only what the dependent Topic needs, plus open Questions, and no Findings. Then link it under the dependent Topic's `## Prerequisites`.
 
 The run is **done** when all of these are true:
 - every claim sentence in the Finding has a footnote or is marked *(inference)*;
 - every footnote resolves to a Source note;
+- every visual has a caption whose claims carry a footnote or an (inference) marker, and every animation's storyboard matches its caption;
 - the Topic README reflects the Finding and its Follow-ups;
 - every linked Prerequisite has a Topic README.
 
@@ -36,6 +38,8 @@ The run is **done** when all of these are true:
 - **Paths**: every Topic lives at `<field>/<topic>/`, exactly two levels deep. Use kebab-case for every file and folder name.
 - **One home**: a Topic lives in one Field only. Other Topics reach it through links.
 - **Links**: write standard Markdown links, `[text](relative/path.md)`, so they resolve in Obsidian, on GitHub and for agents.
+- **Assets**: a Finding's images, SVGs and animation scenes live in `<field>/<topic>/assets/<question-slug>/`.
+- **Math**: write LaTeX, `$…$` inline and `$$…$$` for display. Write kets as `\lvert 0\rangle` and bras as `\langle 0\rvert`, so that no `|` splits a table cell.
 
 ### Finding
 
@@ -50,6 +54,7 @@ status: answered   # partial = some part of the Question is still unresolved
 <2–3 lines>
 
 ## Explanation
+<opens with 2–3 sentences on why this matters; worked examples go in `### Example: …` subsections>
 <each claim sentence carries a footnote[^slug]; own reasoning is marked *(inference)*>
 
 ## Deep dive
@@ -66,7 +71,7 @@ status: answered   # partial = some part of the Question is still unresolved
 `<field>/<topic>/sources/<source-slug>.md` contains:
 - a one-line description,
 - the URL,
-- a link to the local copy, if one is kept beside the note,
+- a link to the local copy, if one is kept (beside the note, or in `assets/` for an image the Finding embeds),
 - the date fetched.
 
 ### Topic README

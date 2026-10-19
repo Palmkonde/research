@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" width="560" height="240" font-family="sans-serif">
+  <!-- Amplitudes for alpha = beta = 1/sqrt2. Left: CNOT on (|0>+|1>)/sqrt2 and |0>. Right: a true copy |+>|+>. -->
+  <rect width="560" height="240" fill="#fcfcfb"/>
+  <g font-size="15" fill="#0b0b0b">
+    <text x="40" y="28">What a CNOT gives</text>
+    <text x="310" y="28">What a true copy needs</text>
+  </g>
+  <!-- baselines -->
+  <g stroke="#c3c2b7" stroke-width="1">
+    <line x1="40" y1="190" x2="270" y2="190"/>
+    <line x1="310" y1="190" x2="540" y2="190"/>
+  </g>
+  <!-- gridline at 0.5 -->
+  <g stroke="#e1e0d9" stroke-width="1">
+    <line x1="40" y1="102.5" x2="270" y2="102.5"/>
+    <line x1="310" y1="102.5" x2="540" y2="102.5"/>
+  </g>
+  <!-- bars: 175 px per unit of amplitude, rounded data end -->
+  <g fill="#2a78d6">
+    <path d="M54 190 V70 Q54 66 58 66 H82 Q86 66 86 70 V190 Z"/>
+    <path d="M222 190 V70 Q222 66 226 66 H250 Q254 66 254 70 V190 Z"/>
+    <path d="M324 190 V106.5 Q324 102.5 328 102.5 H352 Q356 102.5 356 106.5 V190 Z"/>
+    <path d="M380 190 V106.5 Q380 102.5 384 102.5 H408 Q412 102.5 412 106.5 V190 Z"/>
+    <path d="M436 190 V106.5 Q436 102.5 440 102.5 H464 Q468 102.5 468 106.5 V190 Z"/>
+    <path d="M492 190 V106.5 Q492 102.5 496 102.5 H520 Q524 102.5 524 106.5 V190 Z"/>
+  </g>
+  <!-- value labels -->
+  <g font-size="13" fill="#52514e" text-anchor="middle">
+    <text x="70" y="60">0.71</text>
+    <text x="126" y="184">0</text>
+    <text x="182" y="184">0</text>
+    <text x="238" y="60">0.71</text>
+    <text x="340" y="96">0.5</text>
+    <text x="396" y="96">0.5</text>
+    <text x="452" y="96">0.5</text>
+    <text x="508" y="96">0.5</text>
+  </g>
+  <!-- basis-state labels -->
+  <g font-size="14" fill="#52514e" text-anchor="middle" font-family="serif">
+    <text x="70" y="212">|00⟩</text>
+    <text x="126" y="212">|01⟩</text>
+    <text x="182" y="212">|10⟩</text>
+    <text x="238" y="212">|11⟩</text>
+    <text x="340" y="212">|00⟩</text>
+    <text x="396" y="212">|01⟩</text>
+    <text x="452" y="212">|10⟩</text>
+    <text x="508" y="212">|11⟩</text>
+  </g>
+  <text x="290" y="234" font-size="12" fill="#898781" text-anchor="middle">amplitude of each basis state</text>
+</svg>

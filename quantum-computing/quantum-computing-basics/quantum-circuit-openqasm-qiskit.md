@@ -5,20 +5,20 @@ status: answered
 ---
 
 ## TL;DR
-A circuit diagram has one wire per qubit, read left to right, with gates as boxes, a CNOT as a control dot joined to a ⊕ target, and measurements written onto double-line classical bits[^circ]. In OpenQASM 3 the Bell circuit is `OPENQASM 3.0; include "stdgates.inc"; qubit[2] q; bit[2] c; h q[0]; cx q[0], q[1]; c = measure q;`[^ver][^types][^insts]. Qiskit 2.5 loads it with `qasm3.loads`, draws it with `draw()` and samples it with `StatevectorSampler`[^qasm3][^qc][^svs]. PennyLane 0.45 builds it as a QNode with `qp.draw` and `qp.counts`, and loads QASM with `qp.from_qasm3` or, through pennylane-qiskit, `qp.from_qasm`[^draw][^counts][^fq3][^fq]. In 0.45.1, `from_qasm3` worked only without the `include` line *(inference: ran with pennylane 0.45.1)*.
+A circuit diagram has one wire per qubit, read left to right, with gates as boxes, a CNOT as a control dot joined to an $\oplus$ target, and measurements written onto double-line classical bits[^circ]. In OpenQASM 3 the Bell circuit is `OPENQASM 3.0; include "stdgates.inc"; qubit[2] q; bit[2] c; h q[0]; cx q[0], q[1]; c = measure q;`[^ver][^types][^insts]. Qiskit 2.5 loads it with `qasm3.loads`, draws it with `draw()` and samples it with `StatevectorSampler`[^qasm3][^qc][^svs]. PennyLane 0.45 builds it as a QNode with `qp.draw` and `qp.counts`, and loads QASM with `qp.from_qasm3` or, through pennylane-qiskit, `qp.from_qasm`[^draw][^counts][^fq3][^fq]. In 0.45.1, `from_qasm3` worked only without the `include` line *(inference: ran with pennylane 0.45.1)*.
 
 ## Explanation
 
 Versions: the Qiskit pages describe Qiskit 2.5, and the guides were written against `qiskit[all]~=2.5.2`[^qasm3][^pio][^hello]. The PennyLane pages describe PennyLane 0.45.1[^fq3]. The code below was run with qiskit 2.5.2, qiskit-qasm3-import 0.6.0, pennylane 0.45.1 and Python 3.12 *(inference: ran in a scratch venv)*.
 
-Running example: the Bell state |φ+⟩ = (|00⟩ + |11⟩)/√2, made by an H on one qubit followed by a CNOT from that qubit to the other[^circ].
+Running example: the Bell state $\lvert\Phi^+\rangle = (\lvert 00\rangle + \lvert 11\rangle)/\sqrt{2}$, made by an $H$ on one qubit followed by a CNOT from that qubit to the other[^circ].
 
 ### 1. Reading a circuit diagram
 - **Wires are qubits.** In the circuit model, wires represent qubits and gates represent operations on them[^circ].
-- **Time runs left to right.** Information flows from left to right, so the leftmost gate is applied first[^circ]. A circuit whose gates read H, S, H, T from left to right applies the matrix product T·H·S·H, which is written right to left[^circ].
-- **Start state.** Circuits usually start with every qubit in |0⟩[^circ].
+- **Time runs left to right.** Information flows from left to right, so the leftmost gate is applied first[^circ]. A circuit whose gates read $H, S, H, T$ from left to right applies the matrix product $T H S H$, which is written right to left[^circ].
+- **Start state.** Circuits usually start with every qubit in $\lvert 0\rangle$[^circ].
 - **Gates are boxes.** A one-qubit gate is a box with its name, such as H[^circ].
-- **CNOT.** The solid dot marks the control qubit and the ⊕ marks the target[^circ].
+- **CNOT.** The solid dot marks the control qubit and the $\oplus$ marks the target[^circ].
 - **Measurement.** Classical bits are drawn as double lines[^circ]. A measurement box writes its outcome onto the classical bit its arrow points to[^circ].
 - **Qubit order in Qiskit.** In Qiskit the top wire is q0, and q0 is the rightmost character of a bitstring[^circ][^order].
 
@@ -34,7 +34,7 @@ c: 2/═══════════╩══╩═
                 0  1
 ```
 
-In this ASCII form the CNOT target is drawn as a boxed `X` under the `■` control *(inference: ran with qiskit 2.5.2)*. `M` is a measurement, and `╩` with a number shows which bit of the classical register `c` receives the result *(inference: ran with qiskit 2.5.2)*. `draw("mpl")` draws the same circuit with a ⊕ target and meter symbols, and it needs the extra package `pylatexenc` *(inference: ran with qiskit 2.5.2)*.
+In this ASCII form the CNOT target is drawn as a boxed `X` under the `■` control *(inference: ran with qiskit 2.5.2)*. `M` is a measurement, and `╩` with a number shows which bit of the classical register `c` receives the result *(inference: ran with qiskit 2.5.2)*. `draw("mpl")` draws the same circuit with an $\oplus$ target and meter symbols, and it needs the extra package `pylatexenc` *(inference: ran with qiskit 2.5.2)*.
 
 ### 2. Writing it in OpenQASM 3
 ```qasm
@@ -179,12 +179,12 @@ print(bell_probs())              # [0.5 0.  0.  0.5]
 fig, ax = qp.draw_mpl(bell_probs)()
 ```
 - **Device.** `default.qubit` is PennyLane's Python simulator device, and `seed` fixes its sampling[^dq].
-- **Drawing.** `qp.draw(qnode)` returns a function with the QNode's signature that prints the circuit, wires top to bottom in device order[^draw]. In its text output a CNOT is `╭●` on the control and `╰X` on the target *(inference: ran with pennylane 0.45.1)*. `qp.draw_mpl` returns a matplotlib `(Figure, Axes)` pair[^drawmpl], and it draws the CNOT target as ⊕ *(inference: ran with pennylane 0.45.1)*.
+- **Drawing.** `qp.draw(qnode)` returns a function with the QNode's signature that prints the circuit, wires top to bottom in device order[^draw]. In its text output a CNOT is `╭●` on the control and `╰X` on the target *(inference: ran with pennylane 0.45.1)*. `qp.draw_mpl` returns a matplotlib `(Figure, Axes)` pair[^drawmpl], and it draws the CNOT target as $\oplus$ *(inference: ran with pennylane 0.45.1)*.
 - **Shots.** Shots are set with the `qp.set_shots` decorator or transform[^shots]. `None` means analytic mode and an integer means that many shots[^shots]. PennyLane 0.43.0 deprecated passing `shots=` to `qp.device(...)` or to a QNode call[^plrn].
 - **Counts and probabilities.** `qp.counts()` returns a dictionary of observed basis-state bitstrings, and `all_outcomes=True` adds the zero-count outcomes[^counts]. `qp.probs(wires=...)` returns probabilities in lexicographic order of the listed wires[^probs].
 - **Measurement.** Measurement is the QNode's return value, so the circuit needs no classical register *(inference)*.
 
-**Bit order differs from Qiskit.** PennyLane puts wire 0 at the left of a bitstring[^counts][^probs]. In its docs, `X(0)` gives counts `{'10': 4}`[^counts], and `Hadamard(wires=1)` gives `probs` `[0.5, 0.5, 0, 0]` over `|00⟩, |01⟩`[^probs]. Qiskit puts q0 on the right, so the same one-qubit flip prints `'01'` there[^order]. The Bell counts `00`/`11` look the same in both frameworks only because the state is symmetric *(inference)*.
+**Bit order differs from Qiskit.** PennyLane puts wire 0 at the left of a bitstring[^counts][^probs]. In its docs, `X(0)` gives counts `{'10': 4}`[^counts], and `Hadamard(wires=1)` gives `probs` `[0.5, 0.5, 0, 0]` over $\lvert 00\rangle, \lvert 01\rangle, \ldots$[^probs]. Qiskit puts q0 on the right, so the same one-qubit flip prints `'01'` there[^order]. The Bell counts `00`/`11` look the same in both frameworks only because the state is symmetric *(inference)*.
 
 **Loading OpenQASM 3: `qp.from_qasm3`.**
 ```python
