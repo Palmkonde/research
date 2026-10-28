@@ -1,7 +1,12 @@
 # Quantum computing basics
 Fundamentals of quantum computing: qubit states, gates, circuits and a first algorithm. The last group covers what qubit routing needs from the circuit model. A quantum program is a circuit: a sequence of one- and two-qubit gates applied to qubits, usually written in OpenQASM. Gates on the same qubits must run in order, so a circuit forms a dependency graph (DAG) whose front layer holds the gates ready to run. Real hardware runs only a small native gate set, and its two-qubit gates work only on coupled qubit pairs given by the device's coupling map. A SWAP gate exchanges two qubits' states and costs three CNOTs, which is why routers try to add as few as possible.
 
+## Prerequisites
+- [Linear algebra](../../fundamentals/linear-algebra/README.md)
+
 ## Questions
+- [x] [Why is a qubit, and a superposition, represented as a vector?](qubit-state-as-vector.md)
+- [x] [Which mathematical objects can represent a qubit's state, and when should each be used?](qubit-state-representations.md)
 - [x] [How do the common one- and two-qubit gates (X, H, S, T, Rz, CNOT, CZ, SWAP) act on qubit states?](common-gates-action.md)
 - [x] [How is a quantum circuit drawn, written in OpenQASM, and loaded and run in Qiskit?](quantum-circuit-openqasm-qiskit.md)
 - [x] [How does a circuit become a DAG, and what are its layers and front layer?](circuit-dag-layers.md)
@@ -13,7 +18,8 @@ Fundamentals of quantum computing: qubit states, gates, circuits and a first alg
 - [ ] What does transpiling to an ISA circuit with `generate_preset_pass_manager` change in a circuit, stage by stage?
 - [ ] How do mid-circuit measurement and classical feed-forward (`if (c[0]) ...`) work in OpenQASM 3, Qiskit and PennyLane?
 - [ ] Why does PennyLane's `from_qasm3` reject `include "stdgates.inc"` and register wire maps, and is that fixed in a newer release?
-- [ ] How does Qiskit's commutation-aware `DAGDependency` differ from `DAGCircuit`, and how do commutation-analysis passes use it?
-- [ ] How does a control-flow operation (`if_else`, `for_loop`) appear in a `DAGCircuit`, and how does `depth(recurse=True)` count it?
-- [ ] How does a transpiler pass read and rewrite a `DAGCircuit` (for example with `substitute_node_with_dag`)?
-- [ ] How does Qiskit's `SabreSwap` build its own DAG and front layer from a `DAGCircuit`, and does it set single-qubit gates aside as the 2019 paper does?
+- [ ] Why are quantum amplitudes complex rather than real, and could quantum theory work with real amplitudes only?
+- [ ] Why must quantum evolution be linear, and what would a nonlinear evolution break?
+- [ ] How do noise channels such as dephasing and amplitude damping move a qubit's Bloch vector inside the ball?
+- [ ] How does a stabilizer tableau store an $n$-qubit stabilizer state, and how do H, S and CNOT update it?
+- [ ] How is a qubit's density matrix reconstructed from measurement data (state tomography)?
