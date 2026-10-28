@@ -13,3 +13,5 @@
 **Prerequisite**: A Topic that must be understood before another Topic. Lives in its own home Field; the dependent Topic links to it, never copies it.
 
 **Deep dive**: Optional extended part of a Finding, added on request, beyond the short TL;DR and explanation.
+
+**Project**: A time-boxed piece of work with its own goal, plan, deadline and deliverable (e.g. a literature review for a supervisor, a paper reproduction). Draws on Topics through links but does not own them.

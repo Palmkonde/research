@@ -27,7 +27,7 @@ Each run answers one Question with one Finding.
 6. **Stub each missing Prerequisite**: create its Topic README in the Prerequisite's own home Field. Give it a ~5-line overview covering only what the dependent Topic needs, plus open Questions, and no Findings. Then link it under the dependent Topic's `## Prerequisites`.
 
 The run is **done** when all of these are true:
-- every claim sentence in the Finding has a footnote or is marked *(inference)*;
+- every claim sentence in the Finding has a footnote or is marked *(inference)* or *(pending source)*;
 - every footnote resolves to a Source note;
 - every visual has a caption whose claims carry a footnote or an (inference) marker, and every animation's storyboard matches its caption;
 - the Topic README reflects the Finding and its Follow-ups;
@@ -73,6 +73,12 @@ status: answered   # partial = some part of the Question is still unresolved
 - the URL,
 - a link to the local copy, if one is kept (beside the note, or in `assets/` for an image the Finding embeds),
 - the date fetched.
+
+Every Topic has a `sources/no-access.md`, created together with its README. A Source whose full text is closed to you gets a line in it (title, DOI or URL, what the Finding needs from it), not a Source note. Claims that depend on it are marked *(pending source)*. Once the user drops the downloaded copy beside it, turn the line into a Source note and footnote those claims.
+
+### Project
+
+A Project lives at `projects/<project-slug>/`. `projects/` is not a Field and holds no Topics or Findings: a Project links to the Topics it draws on, and their Source notes stay in the Topic. Each Project has a `PLAN.md` that opens with its goal and status, and whose milestones each carry a date and a checkable done criterion. A `README.md` holds the brief and scope when the Project has an outside requester. The Projects and their status are listed in README.md.
 
 ### Topic README
 
