@@ -1,0 +1,7 @@
+# Bouthillier et al., "Accounting for Variance in Machine Learning Benchmarks" (arXiv:2103.03098 v1, 2021)
+
+Supports: variance due to data sampling, parameter initialization and hyperparameter choice markedly affects benchmark results (abstract); recommendations to randomize as many sources of variation as possible (weight initialization, data sampling, data augmentation, hyperparameter optimization), to account for variance rather than comparing average performance alone, and to prefer resampling such as out-of-bootstrap over a single fixed test set (Sections 1, 5); bootstrapping the data is the largest source of variance in their case studies, and model initialization is generally less than 50% of the bootstrap variance (Section 2, Figure 1); for classification, test-set accuracy of a pipeline that errs with probability $\tau$ on $n$ i.i.d. samples follows a binomial distribution, which matches the bootstrap spread they observe (Section 2, Figure 2); improvements smaller than the test-set variance will not generalize (Section 5); they propose deciding by the probability of outperforming $P(A > B)$, with a percentile-bootstrap confidence interval citing Efron (1982), and a threshold of 0.75 (Sections 4, 5).
+
+- URL: <https://arxiv.org/abs/2103.03098> (PDF read: <https://arxiv.org/pdf/2103.03098>; the arXiv comment says "Submitted to MLSys2021", and the PDF's running header says "Proceedings of the 3rd MLSys Conference")
+- Local copy: none.
+- Fetched: 2026-10-28

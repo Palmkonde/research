@@ -1,0 +1,7 @@
+# scikit-learn API, `sklearn.metrics.precision_recall_fscore_support` (1.9.1)
+
+Supports: precision is $tp/(tp+fp)$, "intuitively the ability of the classifier not to label a negative sample as positive"; recall is $tp/(tp+fn)$, "intuitively the ability of the classifier to find all the positive samples"; the F-beta score is a weighted harmonic mean of precision and recall with best value 1 and worst 0, and weights recall more than precision by a factor of $\beta$; `zero_division` sets the value returned when there are no positive predictions (precision) or no positive labels (recall). Also (for the multiclass-averaging Finding): support is the number of occurrences of each class in y_true; multiclass and multilabel data are treated as a collection of binary problems, one per label; `average='micro'` counts the total true positives, false negatives and false positives globally; `'macro'` takes the unweighted mean per label and does not take label imbalance into account; `'weighted'` averages per label weighted by support, altering macro to account for label imbalance, and "can result in an F-score that is not between precision and recall"; `'samples'` is only meaningful for multilabel classification, where it differs from accuracy; labels not present in the data can be included through `labels` and are assigned 0 samples.
+
+- URL: <https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html> (page title says scikit-learn 1.9.1)
+- Local copy: none.
+- Fetched: 2026-10-28

@@ -7,6 +7,7 @@ Personal research vault. Layout: `<field>/<topic>/`. Terms in [GLOSSARY.md](GLOS
 - **low-level**: hardware, OS, compilers, memory.
 - **quantum-computing**: quantum computing.
 - **fundamentals**: math and physics that other Fields build on.
+- **machine-learning**: learning from data: models, training, evaluation.
 
 ## Rendering animations
 

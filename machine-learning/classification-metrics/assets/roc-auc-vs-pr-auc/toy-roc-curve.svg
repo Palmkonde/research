@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 530" width="520" height="530">
+<rect width="520" height="530" fill="#ffffff"/>
+<g stroke="#000000" stroke-width="1.5" fill="none">
+<rect x="70" y="50" width="400" height="400"/>
+<line x1="70.0" y1="450" x2="70.0" y2="456"/>
+<line x1="64" y1="450.0" x2="70" y2="450.0"/>
+<line x1="150.0" y1="450" x2="150.0" y2="456"/>
+<line x1="64" y1="370.0" x2="70" y2="370.0"/>
+<line x1="230.0" y1="450" x2="230.0" y2="456"/>
+<line x1="64" y1="290.0" x2="70" y2="290.0"/>
+<line x1="310.0" y1="450" x2="310.0" y2="456"/>
+<line x1="64" y1="210.0" x2="70" y2="210.0"/>
+<line x1="390.0" y1="450" x2="390.0" y2="456"/>
+<line x1="64" y1="130.0" x2="70" y2="130.0"/>
+<line x1="470.0" y1="450" x2="470.0" y2="456"/>
+<line x1="64" y1="50.0" x2="70" y2="50.0"/>
+</g><g fill="#000000" font-family="serif" font-size="15">
+<text x="70.0" y="474" text-anchor="middle">0.0</text>
+<text x="60" y="455.0" text-anchor="end">0.0</text>
+<text x="150.0" y="474" text-anchor="middle">0.2</text>
+<text x="60" y="375.0" text-anchor="end">0.2</text>
+<text x="230.0" y="474" text-anchor="middle">0.4</text>
+<text x="60" y="295.0" text-anchor="end">0.4</text>
+<text x="310.0" y="474" text-anchor="middle">0.6</text>
+<text x="60" y="215.0" text-anchor="end">0.6</text>
+<text x="390.0" y="474" text-anchor="middle">0.8</text>
+<text x="60" y="135.0" text-anchor="end">0.8</text>
+<text x="470.0" y="474" text-anchor="middle">1.0</text>
+<text x="60" y="55.0" text-anchor="end">1.0</text>
+<text x="270.0" y="500" text-anchor="middle" font-size="17">False positive rate (FPR)</text>
+<text x="18" y="250.0" text-anchor="middle" font-size="17" transform="rotate(-90 18 250.0)">True positive rate (TPR)</text>
+</g>
+<polyline points="70.00,450.00 470.00,50.00" stroke="#000000" stroke-width="1.5" stroke-dasharray="6 5" fill="none"/>
+<polyline points="70.00,450.00 70.00,383.33 70.00,316.67 98.57,316.67 98.57,250.00 127.14,250.00 127.14,183.33 155.71,183.33 155.71,116.67 184.29,116.67 212.86,116.67 212.86,50.00 241.43,50.00 270.00,50.00 298.57,50.00 327.14,50.00 355.71,50.00 384.29,50.00 412.86,50.00 441.43,50.00 470.00,50.00" stroke="#000000" stroke-width="2.5" fill="none"/>
+<g fill="#000000"><circle cx="70.00" cy="450.00" r="3"/><circle cx="70.00" cy="383.33" r="3"/><circle cx="70.00" cy="316.67" r="3"/><circle cx="98.57" cy="316.67" r="3"/><circle cx="98.57" cy="250.00" r="3"/><circle cx="127.14" cy="250.00" r="3"/><circle cx="127.14" cy="183.33" r="3"/><circle cx="155.71" cy="183.33" r="3"/><circle cx="155.71" cy="116.67" r="3"/><circle cx="184.29" cy="116.67" r="3"/><circle cx="212.86" cy="116.67" r="3"/><circle cx="212.86" cy="50.00" r="3"/><circle cx="241.43" cy="50.00" r="3"/><circle cx="270.00" cy="50.00" r="3"/><circle cx="298.57" cy="50.00" r="3"/><circle cx="327.14" cy="50.00" r="3"/><circle cx="355.71" cy="50.00" r="3"/><circle cx="384.29" cy="50.00" r="3"/><circle cx="412.86" cy="50.00" r="3"/><circle cx="441.43" cy="50.00" r="3"/><circle cx="470.00" cy="50.00" r="3"/></g>
+<circle cx="155.71" cy="183.33" r="8" stroke="#000000" stroke-width="2" fill="none"/>
+<g fill="#000000" font-family="serif" font-size="15">
+<text x="169.71" y="207.33">threshold 0.5: (3/14, 2/3)</text>
+<text x="290.0" y="282.0" transform="rotate(-45 290.0 282.0)">random: diagonal, AUC 0.5</text>
+<text x="238.0" y="402.0">ROC AUC = 73/84 ≈ 0.869</text>
+</g>
+</svg>

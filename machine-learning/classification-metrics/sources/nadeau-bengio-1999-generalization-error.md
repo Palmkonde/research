@@ -1,0 +1,7 @@
+# Nadeau and Bengio, "Inference for the Generalization Error" (NeurIPS 12, 1999, pp. 307–313)
+
+Supports: most significance tests in the machine learning literature ignore the variability due to the choice of training set (abstract); the setting is $J$ independent random train/test splits with training size $n_1$ and test size $n_2 = n - n_1$, averaging the $J$ test errors $\hat\mu_j$ (Section 1); Lemma 1, for $k$ variables with common variance $\delta$ and pairwise correlation $\pi$, the sample variance has expectation $\delta(1 - \pi)$ and the mean has variance $\delta\,(\pi + (1-\pi)/k)$ (Section 2); the corrected resampled t-test replaces the naive variance estimate $\hat\sigma^2/J$ with $(1/J + n_2/n_1)\,\hat\sigma^2$, from approximating the correlation between the $\hat\mu_j$ by $n_2/n$, and uses a $t_{J-1}$ quantile (Section 3, Table 1); in simulation the t-test and resampled t-test are liberal, rejecting a true null more often than the nominal level, while the corrected resampled t-test and the conservative Z are close to nominal size or slightly conservative, and the corrected test costs nothing beyond the usual cross-validation estimates (Sections 4, 5).
+
+- URL: <https://papers.nips.cc/paper/1661-inference-for-the-generalization-error> (PDF read: <https://papers.nips.cc/paper_files/paper/1999/file/7d12b66d3df6af8d429c1a357d8b9e1a-Paper.pdf>). The journal version, Machine Learning 52: 239–281 (2003), doi:10.1023/A:1024068626366, was not read: Springer did not serve the PDF.
+- Local copy: none.
+- Fetched: 2026-10-28

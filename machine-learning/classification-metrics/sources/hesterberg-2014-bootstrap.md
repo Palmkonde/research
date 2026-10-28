@@ -1,0 +1,7 @@
+# Hesterberg, "What Teachers Should Know about the Bootstrap: Resampling in the Undergraduate Statistics Curriculum" (arXiv:1411.5279 v1, 2014)
+
+Supports: the common bootstrap percentile interval badly under-covers in small samples (abstract); notation: $s^2 = (n-1)^{-1}\sum (x_i - \bar x)^2$ is the usual sample variance, the bootstrap standard error is the standard deviation of the bootstrap distribution, and the percentile interval is $(q_{\alpha/2}, q_{1-\alpha/2})$, quantiles of the bootstrap statistics (Section 1.1); the one-sample bootstrap draws a sample of size $n$ with replacement, computes the statistic, repeats $r$ times, and takes the middle 95% of the bootstrap distribution as the percentile interval (Section 2.3); a two-sample bootstrap draws bootstrap samples independently from each sample (Section 2.4); $r = 1000$ is adequate for rough standard errors and intervals, and $r = 10^4$ or more when accuracy matters (Sections 3.1, 3.6); bootstrap distributions are too narrow by $\sqrt{(n-1)/n}$ for the mean, and in two-sample or stratified settings this narrowness bias depends on the individual sample or stratum sizes (Section 3.2); "Bootstrapping does not overcome the weakness of small samples as a basis for inference" (Section 3.5); Efron and Tibshirani (1993) suggested $r = 1000$ is enough for confidence intervals (Section 3.6).
+
+- URL: <https://arxiv.org/abs/1411.5279> (PDF read: <https://arxiv.org/pdf/1411.5279>, v1 dated November 20, 2014)
+- Local copy: none.
+- Fetched: 2026-10-28

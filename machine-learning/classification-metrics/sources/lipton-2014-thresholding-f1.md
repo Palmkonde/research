@@ -1,0 +1,9 @@
+# Lipton, Elkan and Naryanaswamy, "Thresholding Classifiers to Maximize F1 Score" (arXiv:1402.1892v2, 2014)
+
+The same work appeared as "Optimal Thresholding of Classifiers to Maximize F1 Measure", Machine Learning and Knowledge Discovery in Databases (ECML PKDD 2014), LNCS 8725: 225–239, doi:10.1007/978-3-662-44851-9_15, per its PMC author manuscript; the text read in full here is the arXiv v2 preprint, dated 14 May 2014.
+
+Supports: F1 $= 2/(1/r + 1/p) = 2tp/(2tp + fp + fn)$ (eq. 1); for fixed base rate and fp, F1 is concave in tp while accuracy is linear (Section 2.1, Figs. 2 and 3); with known score distributions $p(s \mid t=1)$, $p(s \mid t=0)$ and base rate $b = p(t=1)$, Theorem 1: a score is assigned positive by the F1-maximizing rule if and only if $b\,p(s \mid t=1)/\big((1-b)\,p(s \mid t=0)\big) \ge \text{tp}/(\text{fn}+\text{tp}+\text{fp})$, the Jaccard index of the optimal classifier (tp, fp, fn are fractions here, not counts), unlike cost-sensitive decisions where the right side is a constant set by the costs (Section 4); Corollary 1: for calibrated probabilities, $p(t=1 \mid s) = s$, an instance is predicted positive if and only if $s \ge F/2$, where $F$ is the F1 of the optimal rule, so the optimal threshold is half the maximum F1 (Section 4, abstract); because F1 cannot exceed 1, the optimal threshold can never exceed 0.5, and whether an example is predicted positive depends on the other examples in the batch (Section 4.2); Theorem 3: for an uninformative classifier, F1-optimal thresholding predicts every example positive, and the expected F1 of an optimally thresholded random guess depends strongly on the base rate (Section 4.2, Fig. 6).
+
+- URL: <https://arxiv.org/abs/1402.1892> (PDF read: <https://arxiv.org/pdf/1402.1892>, v2; published title and citation checked at <https://pmc.ncbi.nlm.nih.gov/articles/PMC4442797>, whose abstract also states the half-the-optimal-F1 result)
+- Local copy: none.
+- Fetched: 2026-10-28

@@ -1,0 +1,7 @@
+# Collins, Moons et al., "TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods" (BMJ 2024;385:e078378)
+
+Supports: a 27-item reporting checklist for clinical prediction models built with regression or machine learning; item 10, explain how the study size was arrived at, separately for development and evaluation; item 12a, describe how the data were used (for example for development and evaluation), including whether the data were partitioned; item 12e, specify all measures and plots used, and their rationale, to evaluate model performance (for example discrimination, calibration, clinical utility) and, if relevant, to compare multiple models; item 13, if class imbalance methods were used, state why and how; item 15, specify the model output (probabilities, classification) and give the rationale for any classification and how the thresholds were identified; item 20a, the number of participants with and without the outcome; item 21, the number of participants and outcome events in each analysis (for example development, hyperparameter tuning, evaluation); item 23a, report model performance estimates with confidence intervals, including for key subgroups, and consider plots (Table 2).
+
+- URL: <https://doi.org/10.1136/bmj-2023-078378> (read at <https://pmc.ncbi.nlm.nih.gov/articles/PMC11019967/>; bmj.com returned 403)
+- Local copy: none.
+- Fetched: 2026-10-28
